@@ -8,6 +8,8 @@ mark4 = name_mark_age("physics mark")
 mark5 = name_mark_age("biology mark")
 marks = [mark1, mark2, mark3, mark4, mark5]
 
+# this exercise is corret
+
 markav = sum(marks) / len(marks)
 def markaverage (which):
     while True:
