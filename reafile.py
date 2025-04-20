@@ -1,4 +1,4 @@
-file_path = r"Add path of your file"
+file_path = r"c:\Users\andre\OneDrive\Изображения\Документы\programming\Новая папка\HZ.txt"
 while True:
     print("\nChoose an option:")
     print("1 - Read file contents")
