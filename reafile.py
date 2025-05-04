@@ -29,8 +29,45 @@ while True:
             print("Empty text. Nothing was written.")
 
     elif choice == '3':
-        print("Leaving... See you soon!")
-        break
-
+       try:
+             with open(file_path, 'r', encoding='utf-8') as file:
+                 lines = file.readlines()
+ 
+             if not lines:
+                 print("The file is empty.")
+                 continue
+ 
+             print("\n--- File Lines ---")
+             for i, line in enumerate(lines, start=1):
+                 print(f"{i}: {line.strip()}")
+ 
+             line_number = input("Enter the line number you want to delete: ").strip()
+ 
+             if not line_number.isdigit():
+                 print("Invalid input. Please enter a number.")
+                 continue
+ 
+             index = int(line_number) - 1
+ 
+             if index < 0 or index >= len(lines):
+                 print("Line number out of range.")
+                 continue
+ 
+             removed_line = lines.pop(index)
+ 
+             with open(file_path, 'w', encoding='utf-8') as file:
+                 file.writelines(lines)
+ 
+             print(f"Line deleted successfully: {removed_line.strip()}")
+ 
+       except FileNotFoundError:
+             print("File not found. Check the path.")
+ 
+    elif choice == '4':
+         print("Leaving... See you soon!")
+         break
+ 
+     
     else:
-        print("Invalid option. Please try again.")
+         print("Invalid option. Please try again.")
+         print("Invalid option. Please try again.")
