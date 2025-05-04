@@ -3,7 +3,8 @@ while True:
     print("\nChoose an option:")
     print("1 - Read file contents")
     print("2 - Write to file")
-    print("3 - Exit")
+    print("3 - Delete a line from the file")
+    print("4 - Exit")
 
     choice = input("Enter option number: ").strip()
 
